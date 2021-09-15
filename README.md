@@ -1,24 +1,47 @@
-# Friday Night Funkin' - Psych Engine
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
+# Sarvente's Mid-Fight Masses - The Definitive Release
+Created as an alternative for the original Mid-Fight Masses mod, this mod is quite literally the DEFINITIVE version of MFM!
 
-## Installation:
-Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
+[GameBanana](https://gamebanana.com/mods/321032)
+[GameJolt](https://gamejolt.com/games/midfightmasses/646339)
 
-You can do this with: `haxelib install linc_luajit` on a Command prompt/PowerShell
+Psych Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
 
-...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
+## About:
+
+Mid-Fight Masses!
+You know, that one mod.
+The one that doesn't have countryhumans.
+
+Yeah, it's back, and it's better than ever! In this remaster, the beloved Sarvente is back!
+No more dropped inputs or disappearing notes!
+Best of all, it's completely recharted by yours truly!
+
+During a long road trip, Boyfriend really needs to go to the bathroom. After miles of nothing, Boyfriend and Girlfriend finally reach a small town. Paying a local church a visit, they stumble into a friendly nun named Sarvente, who is very eager to get them to join the church! After their stubbornness, however, she isn't all too happy!
+
+Wait, what's that?
+The mod has more?
+Nah, it's just Sarv!
+...oh yeah, and that Slavic dude and their kid.
 
 ## Credits:
+* Mike Geno - Music
+* AmazeinG - Reanimated Sprites
+* SugarRatio - Reanimated RUv
+* Goldie - Programming & Charting
+* kuroao-anomal - Original Programming & Animation
+* dokki.doodlez - Original Artwork & Animation
+
+## Psych Engine Credits:
 * Shadow Mario - Coding
 * RiverOaken - Arts and Animations
 
 ### Special Thanks
 * Keoiki - Note Splash Animations
 
-WARNING: This engine is still very early in development! You can request new features though
+WARNING: This engine is still very early in development! You can request new features though.
 _____________________________________
 
-# Features
+# Psych Engine Features
 
 ## Attractive animated dialogue boxes:
 

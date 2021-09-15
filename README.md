@@ -2,6 +2,7 @@
 Created as an alternative for the original Mid-Fight Masses mod, this mod is quite literally the DEFINITIVE version of MFM!
 
 [GameBanana](https://gamebanana.com/mods/321032)
+
 [GameJolt](https://gamejolt.com/games/midfightmasses/646339)
 
 Psych Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.

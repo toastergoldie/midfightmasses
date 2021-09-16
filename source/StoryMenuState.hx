@@ -41,7 +41,7 @@ class StoryMenuState extends MusicBeatState
 
 	//The week's name, displayed on top-right
 	var weekNames:Array<String> = [
-		"",
+		"Tutorial",
 		"Mid-Fight Masses",
 		"Selever",
 	];
@@ -51,6 +51,7 @@ class StoryMenuState extends MusicBeatState
 		'stage',		
 		'church',
 		'church'
+	//	The church background is temp-- it's currently just a recolor!!
 	];
 	
 	var scoreText:FlxText;

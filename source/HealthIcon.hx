@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxSprite;
+import flixel.FlxG;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
@@ -11,6 +12,7 @@ class HealthIcon extends FlxSprite
 	private var isOldIcon:Bool = false;
 	private var isPlayer:Bool = false;
 	private var char:String = '';
+	// private var iconpath:String = 'icons';
 
 	// The following icons have antialiasing forced to be disabled
 	var noAntialiasing:Array<String> = ['bf-pixel', 'senpai', 'spirit'];
@@ -38,15 +40,31 @@ class HealthIcon extends FlxSprite
 	}
 
 	public function changeIcon(char:String) {
+		/*
+		if(ClientPrefs.redrawnIcons = true)
+			iconpath = 'redrawnicons';
+
+		else if(ClientPrefs.redrawnIcons = false)
+			iconpath = 'icons';
+		*/
+
 		if(this.char != char) {
 			var name:String = 'icons/icon-' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 			var file:Dynamic = Paths.image(name);
-
 			loadGraphic(file, true, 150, 150);
 			animation.add(char, [0, 1], 0, false, isPlayer);
 			animation.play(char);
 			this.char = char;
+			/*
+			var name:String = iconpath + '/icon-' + char;
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = iconpath + '/icon-face'; //Prevents crash from missing icon
+			var file:Dynamic = Paths.image(name);
+			loadGraphic(file, true, 150, 150);
+			animation.add(char, [0, 1], 0, false, isPlayer);
+			animation.play(char);
+			this.char = char;
+			*/
 
 			antialiasing = ClientPrefs.globalAntialiasing;
 			for (i in 0...noAntialiasing.length) {

@@ -24,6 +24,19 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
+		['Creator'],
+		['goldie',				'goldie',			'Artist/Programmer of the Defitive Release',		'https://youtube.com/goldiegames',		0xFFEF8C13],
+		[''],
+		['Thanks to'],
+		['Mike Geno',			'mikegeno',			'Composer of Mid-Fight Masses',						'https://twitter.com/electro_mike',		0xFF4984E2],
+		['AmazeinG',			'amazeing',			'Artist/Animator of Reanimated Sprites',			'https://twitter.com/AmazeinG666',		0xFFEE0949],
+		['SugarRatio',			'sugarratio',		'Artist/Animator of Reanimated Ruv',				'https://twitter.com/SugarRatio',		0xFF39CEA1],
+		['Clock Toon',			'clocktoon',		'Redrawn Icons',				'https://youtube.com/channel/UCEErvgy1uAiosZgKGXIgPZg', 	0xFF6CD8E0],
+		[''],
+		['Mid-Fight Masses Creators'],
+		['kuroao_anomal',		'kuroaoanomal',		'Programming and Animation',						'https://twitter.com/Kuroao_Anomal',	0xFF472778],
+		['dokki.doodlez',		'dokkidoodlez',		'Artist/Animator of Mid-Fight Masses',				'https://twitter.com/dokkidoodlez',		0xFF6F4F69],
+		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
 		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],

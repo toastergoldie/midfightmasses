@@ -34,7 +34,6 @@ class OptionsState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
-	private var showCharacter:Character;
 
 	override function create() {
 		#if desktop
@@ -48,10 +47,6 @@ class OptionsState extends MusicBeatState
 		menuBG.screenCenter();
 		menuBG.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuBG);
-
-		showCharacter = new Character(840, 170, 'bf', true);
-		showCharacter.setGraphicSize(Std.int(showCharacter.width * 0.8));
-		showCharacter.updateHitbox();
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -102,7 +97,7 @@ class OptionsState extends MusicBeatState
 					openSubState(new ControlsSubstate());
 
 				case 'Preferences':
-					openSubState(new PreferencesSubstate(showCharacter));
+					openSubState(new PreferencesSubstate());
 			}
 		}
 	}
@@ -679,6 +674,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 	static var options:Array<String> = [
 		'GRAPHICS',
 		'Low Quality',
+	//	'Redrawn Icons',
 		'Anti-Aliasing',
 		'Persistent Cached Data',
 		#if !html5
@@ -693,7 +689,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Camera Zooms'
+		'Camera Zooms',
+		'Camera Shakes'
 		#if !mobile
 		,'FPS Counter'
 		#end
@@ -706,20 +703,14 @@ class PreferencesSubstate extends MusicBeatSubstate
 	private var textNumber:Array<Int> = [];
 
 	private var characterLayer:FlxTypedGroup<Character>;
-	private var showCharacter:Character;
+	private var showCharacter:Character = null;
 	private var descText:FlxText;
 
-	public function new(showCharacter:Character)
+	public function new()
 	{
 		super();
 		characterLayer = new FlxTypedGroup<Character>();
 		add(characterLayer);
-
-		// avoids lagspikes while scrolling through menus!
-		characterLayer.add(showCharacter);
-		characterLayer.visible = false;
-		this.showCharacter = showCharacter;
-		showCharacter.dance();
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -836,6 +827,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Low Quality':
 						ClientPrefs.lowQuality = !ClientPrefs.lowQuality;
 
+				//	case 'Redrawn Icons':
+				//		ClientPrefs.redrawnIcons = !ClientPrefs.redrawnIcons;
+
 					case 'Anti-Aliasing':
 						ClientPrefs.globalAntialiasing = !ClientPrefs.globalAntialiasing;
 						showCharacter.antialiasing = ClientPrefs.globalAntialiasing;
@@ -873,6 +867,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Camera Zooms':
 						ClientPrefs.camZooms = !ClientPrefs.camZooms;
+
+					case 'Camera Shakes':
+						ClientPrefs.cameraShake = !ClientPrefs.cameraShake;
 
 					case 'Hide HUD':
 						ClientPrefs.hideHud = !ClientPrefs.hideHud;
@@ -952,6 +949,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If unchecked, hides FPS Counter.";
 			case 'Low Quality':
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
+		//	case 'Redrawn Icons':
+		//		daText = "If checked, the icons used in the health bar will be redrawn,\ncourtesy of Clock Toon.";
 			case 'Persistent Cached Data':
 				daText = "If checked, images loaded will stay in memory\nuntil the game is closed, this increases memory usage,\nbut basically makes reloading times instant.";
 			case 'Anti-Aliasing':
@@ -972,6 +971,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "Uncheck this if you're sensitive to flashing lights!";
 			case 'Camera Zooms':
 				daText = "If unchecked, the camera won't zoom in on a beat hit.";
+			case 'Camera Shakes':
+				daText = "If unchecked, the camera won't shake on Zavodila.";
 			case 'Hide HUD':
 				daText = "If checked, hides most HUD elements.";
 			case 'Hide Song Length':
@@ -1010,11 +1011,18 @@ class PreferencesSubstate extends MusicBeatSubstate
 			}
 		}
 
-		if(options[curSelected] == 'Anti-Aliasing')
-			characterLayer.visible = true;
-	 	else
-			characterLayer.visible = false;
-
+		if(options[curSelected] == 'Anti-Aliasing') {
+			if(showCharacter == null) {
+				showCharacter = new Character(840, 170, 'bf', true);
+				showCharacter.setGraphicSize(Std.int(showCharacter.width * 0.8));
+				showCharacter.updateHitbox();
+				showCharacter.dance();
+				characterLayer.add(showCharacter);
+			}
+		} else if(showCharacter != null) {
+			characterLayer.clear();
+			showCharacter = null;
+		}
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 	}
 
@@ -1028,6 +1036,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.showFPS;
 					case 'Low Quality':
 						daValue = ClientPrefs.lowQuality;
+			//		case 'Redrawn Icons':
+			//			daValue = ClientPrefs.redrawnIcons;
 					case 'Anti-Aliasing':
 						daValue = ClientPrefs.globalAntialiasing;
 					case 'Note Splashes':
@@ -1046,6 +1056,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.violence;
 					case 'Camera Zooms':
 						daValue = ClientPrefs.camZooms;
+					case 'Camera Shakes':
+						daValue = ClientPrefs.cameraShake;
 					case 'Hide HUD':
 						daValue = ClientPrefs.hideHud;
 					case 'Persistent Cached Data':

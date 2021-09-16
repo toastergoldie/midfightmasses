@@ -27,7 +27,7 @@ Nah, it's just Sarv!
 ## Credits:
 * Mike Geno - Music
 * AmazeinG - Reanimated Sprites
-* SugarRatio - Reanimated RUv
+* SugarRatio - Reanimated Ruv
 * Goldie - Programming & Charting
 * kuroao-anomal - Original Programming & Animation
 * dokki.doodlez - Original Artwork & Animation

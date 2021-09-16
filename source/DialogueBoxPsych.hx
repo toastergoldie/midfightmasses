@@ -44,15 +44,15 @@ class DialogueBoxPsych extends FlxSpriteGroup
 				char.animation.addByPrefix('talk', 'bftalkloop', 24, true); //During dialogue
 				char.flipX = !char.flipX;
 
-			case 'psychic':
-				char.frames = Paths.getSparrowAtlas('dialogue/Psy_Dialogue'); //oppa gangnam style xddddd kill me
-				char.animation.addByPrefix('talkIdle', 'PSYtalk', 24, true);
-				char.animation.addByPrefix('talk', 'PSY loop', 24, true);
-				char.animation.addByPrefix('angryIdle', 'PSY angry', 24, true);
-				char.animation.addByPrefix('angry', 'PSY ANGRY loop', 24, true);
-				char.animation.addByPrefix('unamusedIdle', 'PSY unamused', 24, true);
-				char.animation.addByPrefix('unamused', 'PSY UNAMUSED loop', 24, true);
-				char.y -= 140;
+//			case 'psychic':
+//				char.frames = Paths.getSparrowAtlas('dialogue/Psy_Dialogue'); //oppa gangnam style xddddd kill me
+//				char.animation.addByPrefix('talkIdle', 'PSYtalk', 24, true);
+//				char.animation.addByPrefix('talk', 'PSY loop', 24, true);
+//				char.animation.addByPrefix('angryIdle', 'PSY angry', 24, true);
+//				char.animation.addByPrefix('angry', 'PSY ANGRY loop', 24, true);
+//				char.animation.addByPrefix('unamusedIdle', 'PSY unamused', 24, true);
+//				char.animation.addByPrefix('unamused', 'PSY UNAMUSED loop', 24, true);
+//				char.y -= 140;
 		}
 		char.animation.play('talkIdle', true);
 	}

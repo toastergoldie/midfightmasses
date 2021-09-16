@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Menu_Sickle.png"><SubTexture name="M Sickle Bop idle0000" x="0" y="0" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0000" x="328" y="0" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0001" x="328" y="0" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0002" x="0" y="358" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0003" x="0" y="358" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0004" x="328" y="358" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0005" x="328" y="358" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0006" x="0" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0007" x="0" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0008" x="328" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0009" x="328" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0010" x="328" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+<SubTexture name="M Sickle Bop idle0011" x="328" y="716" width="328" height="358" frameX="0" frameY="0" frameWidth="328" frameHeight="358" />
+</TextureAtlas>

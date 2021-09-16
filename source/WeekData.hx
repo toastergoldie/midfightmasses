@@ -5,9 +5,9 @@ class WeekData {
 	//Go to FreeplayState.hx and add the head icons
 	//Go to StoryMenuState.hx and add the characters/backgrounds
 	public static var songsNames:Array<Dynamic> = [
-		['Tutorial-Remix'],							// Tutorial, this one isn't added to Freeplay, instead it is added from assets/preload/freeplaySonglist.txt
+		['Tutorial-Remix'],				// Tutorial, this one isn't added to Freeplay, instead it is added from assets/preload/freeplaySonglist.txt
 		['Parish', 'Worship', 'Zavodila','Gospel'],	// Week ♰
-		['Casanova'],								// =???=
+		['Casanova'],					// =???=
 	];
 
 	// Custom week number, used for your week's score not being overwritten by a new vanilla week when the game updates
@@ -39,7 +39,7 @@ class WeekData {
 	public static var weekResetName:Array<String> = [
 		"Tutorial",		// Tutorial what do u think???
 		"Week ♰",		// Week ♰
-		"Week Selever",	// =???=
+		"Week Selever",		// =???=
 	];
 
 

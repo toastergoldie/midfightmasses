@@ -13,16 +13,16 @@ Mid-Fight Masses!
 You know, that one mod.
 The one that doesn't have countryhumans.
 
-Yeah, it's back, and it's better than ever! In this remaster, the beloved Sarvente is back!
+Yeah, it's back, and it's better than ever! In this remaster, the beloved Sarvente is back... in a brand-new engine!
 No more dropped inputs or disappearing notes!
 Best of all, it's completely recharted by yours truly!
 
 During a long road trip, Boyfriend really needs to go to the bathroom. After miles of nothing, Boyfriend and Girlfriend finally reach a small town. Paying a local church a visit, they stumble into a friendly nun named Sarvente, who is very eager to get them to join the church! After their stubbornness, however, she isn't all too happy!
 
 Wait, what's that?
-\nThe mod has more?
-\nNah, it's just Sarv!
-\n...oh yeah, and that Slavic dude and their kid.
+The mod has more?
+Nah, it's just Sarv!
+...oh yeah, and that Slavic dude and their kid.
 
 ## Credits:
 * Mike Geno - Music

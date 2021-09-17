@@ -553,9 +553,10 @@ class PlayState extends MusicBeatState
 		}
 
 		var lowercaseSong:String = SONG.song.toLowerCase();
-		var file:String = Paths.txt(lowercaseSong + '/' + lowercaseSong + 'Dialogue');
-		if (OpenFlAssets.exists(file)) {
-			dialogue = CoolUtil.coolTextFile(file);
+		switch (lowercaseSong)
+		{
+			case 'parish' | 'worship' | 'zavodila' | 'gospel':
+				dialogue = CoolUtil.coolTextFile(Paths.txt(lowercaseSong + '/' + lowercaseSong + 'Dialogue'));
 		}
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;

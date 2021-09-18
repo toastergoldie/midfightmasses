@@ -45,15 +45,45 @@ class DialogueBoxPsych extends FlxSpriteGroup
 				char.animation.addByPrefix('scared', 'bfPortSad', 24, true);
 				char.flipX = !char.flipX;
 
-//			case 'psychic':
-//				char.frames = Paths.getSparrowAtlas('dialogue/Psy_Dialogue'); //oppa gangnam style xddddd kill me
-//				char.animation.addByPrefix('talkIdle', 'PSYtalk', 24, true);
-//				char.animation.addByPrefix('talk', 'PSY loop', 24, true);
-//				char.animation.addByPrefix('angryIdle', 'PSY angry', 24, true);
-//				char.animation.addByPrefix('angry', 'PSY ANGRY loop', 24, true);
-//				char.animation.addByPrefix('unamusedIdle', 'PSY unamused', 24, true);
-//				char.animation.addByPrefix('unamused', 'PSY UNAMUSED loop', 24, true);
-//				char.y -= 140;
+			case 'sarvente':
+				char.frames = Paths.getSparrowAtlas('sacredmass/portraits');
+				char.animation.addByPrefix('happy', 'SarvHappy', 24, true);
+				char.animation.addByPrefix('sad', 'SarvSad', 24, true);
+				char.animation.addByPrefix('upset', 'SarvUpset', 24, true);
+				char.animation.addByPrefix('angry', 'SarvAngery', 24, true);
+				char.animation.addByPrefix('upset', 'SarvUpset', 24, true);
+				char.animation.addByPrefix('smile', 'SarvSmile', 24, true);
+				char.animation.addByPrefix('lucifer', 'SarvDevil', 24, true);
+				char.y -= 140;
+
+			case 'ruv':
+				char.frames = Paths.getSparrowAtlas('sacredmass/portraits');
+				char.animation.addByPrefix('idle', 'RuvNormal', 24, true);
+				char.animation.addByPrefix('bruh', 'RuvBruh', 24, true);
+				char.animation.addByPrefix('angry', 'RuvAngery', 24, true);
+				char.y -= 140;
+
+			case 'gf':
+				char.frames = Paths.getSparrowAtlas('sacredmass/portraits');
+				char.animation.addByPrefix('idle', 'gfPortEnter', 24, true);
+				char.animation.addByPrefix('happy', 'gfPortHappy', 24, true);
+				char.flipX = !char.flipX;
+				
+			case 'razzy':
+				char.frames = Paths.getSparrowAtlas('sacredmass/portraits');
+				char.animation.addByPrefix('idle', 'RasNormal', 24, true);
+				char.animation.addByPrefix('bruh', 'RasBruh', 24, true);
+			/*
+			case 'psychic':
+				char.frames = Paths.getSparrowAtlas('dialogue/Psy_Dialogue');
+				char.animation.addByPrefix('talkIdle', 'PSYtalk', 24, true);
+				char.animation.addByPrefix('talk', 'PSY loop', 24, true);
+				char.animation.addByPrefix('angryIdle', 'PSY angry', 24, true);
+				char.animation.addByPrefix('angry', 'PSY ANGRY loop', 24, true);
+				char.animation.addByPrefix('unamusedIdle', 'PSY unamused', 24, true);
+				char.animation.addByPrefix('unamused', 'PSY UNAMUSED loop', 24, true);
+				char.y -= 140;
+			*/
 		}
 		char.animation.play('talkIdle', true);
 	}

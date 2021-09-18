@@ -39,9 +39,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	function addCharacter(char:FlxSprite, name:String) {
 		switch(name) {
 			case 'bf':
-				char.frames = Paths.getSparrowAtlas('dialogue/BF_Dialogue');
-				char.animation.addByPrefix('talkIdle', 'BFTalk', 24, true); //Dialogue ended
-				char.animation.addByPrefix('talk', 'bftalkloop', 24, true); //During dialogue
+				char.frames = Paths.getSparrowAtlas('sacredmass/portraits');
+				char.animation.addByPrefix('idle', 'bfPortEnter', 24, true);
+				char.animation.addByPrefix('talk', 'bfPortHappy', 24, true);
+				char.animation.addByPrefix('scared', 'bfPortSad', 24, true);
 				char.flipX = !char.flipX;
 
 //			case 'psychic':

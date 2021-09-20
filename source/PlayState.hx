@@ -552,11 +552,14 @@ class PlayState extends MusicBeatState
 			add(halloweenWhite);
 		}
 
-		var lowercaseSong:String = SONG.song.toLowerCase();
-		switch (lowercaseSong)
-		{
-			case 'parish' | 'worship' | 'zavodila' | 'gospel':
-				dialogue = CoolUtil.coolTextFile(Paths.txt(lowercaseSong + '/' + lowercaseSong + 'Dialogue'));
+		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
+		if (OpenFlAssets.exists(file)) {
+			dialogueJson = DialogueBoxPsych.parseDialogue(file);
+		}
+
+		var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
+		if (OpenFlAssets.exists(file)) {
+			dialogue = CoolUtil.coolTextFile(file);
 		}
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;

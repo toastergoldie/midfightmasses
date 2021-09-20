@@ -389,14 +389,14 @@ class PlayState extends MusicBeatState
 		
 					add(stageCurtains);
 	
-					var stageCurtains:FlxSprite = new FlxSprite(-240, -630).loadGraphic(Paths.image('hellchurch/circ1'));
+					var stageCurtains:FlxSprite = new FlxSprite(-240, -630).loadGraphic(Paths.image('sacredmass/hellchurch/circ1'));
 					stageCurtains.updateHitbox();
 					stageCurtains.antialiasing = true;
 					stageCurtains.active = false;
 		
 					add(stageCurtains);
 	
-					var stageCurtains:FlxSprite = new FlxSprite(-240, -630).loadGraphic(Paths.image('hellchurch/circ2'));
+					var stageCurtains:FlxSprite = new FlxSprite(-240, -630).loadGraphic(Paths.image('sacredmass/hellchurch/circ2'));
 					stageCurtains.updateHitbox();
 					stageCurtains.antialiasing = true;
 					stageCurtains.active = false;

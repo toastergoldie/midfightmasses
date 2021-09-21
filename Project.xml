@@ -147,9 +147,6 @@
 	<icon path="art/icon128.png" size='128'/>
 	<icon path="art/icon256.png" size='256'/>
 	<icon path="art/icon512.png" size='512'/>
-	<!--just uses .ico since the pngs are fuckin stupid and don't correspond to the size xd -->
-	<icon path="art/iconICO.ico" />
-
 
 	<!-- <haxedef name="SKIP_TO_PLAYSTATE" if="debug" /> -->
 	<haxedef name="NG_LOGIN" if="newgrounds" />
